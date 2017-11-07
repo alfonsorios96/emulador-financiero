@@ -1,0 +1,32 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="emulador-financiero-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class EmuladorFinancieroApp extends Polymer.Element {
+      static get is() { return 'emulador-financiero-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'emulador-financiero-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(EmuladorFinancieroApp.is, EmuladorFinancieroApp);
+  </script>
+</dom-module>

@@ -1,0 +1,22 @@
+{
+  "name": "emulador-financiero",
+  "version": "0.0.0",
+  "description": "Prática de arquitectura app polymer 2",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "bower cache clean && bower install && polymer serve --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfonsorios96/emulador-financiero.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alfonsorios96/emulador-financiero/issues"
+  },
+  "homepage": "https://github.com/alfonsorios96/emulador-financiero#readme"
+}

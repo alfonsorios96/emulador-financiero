@@ -1,0 +1,6 @@
+{
+  "name": "emulador-financiero",
+  "short_name": "emulador-financiero",
+  "start_url": "/",
+  "display": "standalone"
+}
