@@ -5,10 +5,10 @@
      * @customElement
      * @polymer
      */
-    class <%= name %> extends ReduxMixin(Polymer.Element) {
+    class <%= className %> extends ReduxMixin(Polymer.Element) {
 
         static get is() {
-            return '<%= name %>';
+            return '<%= tagName %>';
         }
 
         connectedCallback() {
@@ -26,5 +26,5 @@
             };
         }
     }
-    window.customElements.define(<%= name %>.is, <%= name %>);
+    window.customElements.define(<%= className %>.is, <%= className %>);
 })();

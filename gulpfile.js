@@ -39,7 +39,10 @@ gulp.task('view-html', () =>
 
 gulp.task('view-js', () =>
     gulp.src('template/custom-element-template.js')
-        .pipe(data(() => ({name: dashCaseToUpperCase(tagName)})))
+        .pipe(data(() => ({
+            className: dashCaseToUpperCase(tagName),
+            tagName: tagName
+        })))
         .pipe(template())
         .pipe(rename(`${tagName}.js`))
         .pipe(gulp.dest(`src/views/${tagName}`))
