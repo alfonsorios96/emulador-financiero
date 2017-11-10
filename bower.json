@@ -4,8 +4,7 @@
   "version": "0.0.0",
   "dependencies": {
     "polymer": "Polymer/polymer#2.2.0",
-    "polymer-redux": "1.0.4",
-    "em-account-card": "alfonsorios96/em-account-card#0.0.0"
+    "polymer-redux": "1.0.4"
   },
   "devDependencies": {
     "web-component-tester": "Polymer/web-component-tester#6.0.0",
