@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "start": "bower cache clean && bower install && polymer serve --open"
+    "dev": "bower cache clean && bower install && polymer serve --open",
+    "view": "node_modules/.bin/gulp view --tag ef-option-list"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,12 @@
   "devDependencies": {
     "eslint": "4.10.0",
     "eslint-config-google": "0.7.1",
-    "eslint-plugin-html": "3.2.2"
+    "eslint-plugin-html": "3.2.2",
+    "gulp": "3.9.1",
+    "gulp-data": "1.2.1",
+    "gulp-rename": "1.2.2",
+    "gulp-template": "4.0.0",
+    "yargs": "10.0.3"
   },
   "dependencies": {
     "redux": "3.7.2"
