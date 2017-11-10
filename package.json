@@ -20,11 +20,11 @@
   },
   "homepage": "https://github.com/alfonsorios96/emulador-financiero#readme",
   "devDependencies": {
-    "eslint": "^4.10.0",
-    "eslint-config-google": "^0.7.1",
-    "eslint-plugin-html": "^3.2.2"
+    "eslint": "4.10.0",
+    "eslint-config-google": "0.7.1",
+    "eslint-plugin-html": "3.2.2"
   },
   "dependencies": {
-    "redux": "^3.7.2"
+    "redux": "3.7.2"
   }
 }
