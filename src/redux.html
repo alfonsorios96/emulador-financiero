@@ -1,0 +1,10 @@
+<script>
+    // Create a Redux store
+    let initialState = {
+        title: 'emulador-financiero-app',
+    };
+    const store = Redux.createStore((state = initialState, action) => state);
+
+    // Create the PolymerRedux mixin
+    const ReduxMixin = PolymerRedux(store);
+</script>
