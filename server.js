@@ -13,4 +13,3 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 server.listen(process.env.PORT);
-logger.info(`App is serving at http://127.0.0.1:${process.env.PORT}`);

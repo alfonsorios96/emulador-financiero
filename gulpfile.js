@@ -4,6 +4,8 @@ const template = require('gulp-template');
 const data = require('gulp-data');
 const argv = require('yargs').argv;
 const rename = require('gulp-rename');
+const browserSync = require('browser-sync').create();
+const exec = require('child_process').exec;
 
 const tagName = (argv.tag === undefined) ? 'custom-view' : argv.tag;
 const env = (argv.env === undefined) ? 'dev' : argv.env;
@@ -21,6 +23,8 @@ const dashCaseToUpperCase = (string) => {
     return capitalizeString.join('');
 };
 
+// Begins create styles file
+
 gulp.task('view-styles', () => {
     'use strict';
     gulp.src('template/custom-element-template-styles.html')
@@ -30,6 +34,10 @@ gulp.task('view-styles', () => {
         .pipe(gulp.dest(`src/views/${tagName}`));
 });
 
+// Ends create styles file
+
+// Begins create html file
+
 gulp.task('view-html', () => {
     'use strict';
     gulp.src('template/custom-element-template.html')
@@ -38,6 +46,10 @@ gulp.task('view-html', () => {
         .pipe(rename(`${tagName}.html`))
         .pipe(gulp.dest(`src/views/${tagName}`));
 });
+
+// Ends create html file
+
+// Begins create js file
 
 gulp.task('view-js', () => {
     'use strict';
@@ -51,7 +63,11 @@ gulp.task('view-js', () => {
         .pipe(gulp.dest(`src/views/${tagName}`));
 });
 
+// Ends create js file
+
 gulp.task('view', ['view-styles', 'view-html', 'view-js']);
+
+// Begins enviroment config
 
 gulp.task('config', () => {
     'use strict';
@@ -60,3 +76,26 @@ gulp.task('config', () => {
         .pipe(rename('.env'))
         .pipe(gulp.dest(''));
 });
+
+// Ends enviroment config
+
+// Begins BrowserSync
+
+gulp.task('server-watch', ['config'], (done) => {
+    'use strict';
+    browserSync.reload();
+    done();
+});
+
+gulp.task('default', ['config'], () => {
+    'use strict';
+    browserSync.init({
+        server: {
+            baseDir: './',
+        }
+    });
+});
+
+gulp.watch('src/**/*.*', ['server-watch']);
+
+// Ends BrowserSync

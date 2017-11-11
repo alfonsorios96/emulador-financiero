@@ -8,7 +8,7 @@
   },
   "scripts": {
     "install": "bower cache clean && bower install",
-    "dev": "npm run install && node_modules/.bin/gulp config && node server.js",
+    "dev": "npm run install && node_modules/.bin/gulp default && node server.js",
     "prod": "npm run install && polymer build && node_modules/.bin/gulp config --env prod && node server.js",
     "view": "node_modules/.bin/gulp view --tag ef-option-list"
   },
@@ -23,17 +23,18 @@
   },
   "homepage": "https://github.com/alfonsorios96/emulador-financiero#readme",
   "devDependencies": {
+    "browser-sync": "2.18.13",
+    "dotenv": "4.0.0",
     "eslint": "4.10.0",
     "eslint-config-google": "0.7.1",
     "eslint-plugin-html": "3.2.2",
+    "express": "4.16.2",
     "gulp": "3.9.1",
     "gulp-data": "1.2.1",
     "gulp-rename": "1.2.2",
     "gulp-template": "4.0.0",
-    "yargs": "10.0.3",
-    "dotenv": "4.0.0",
-    "express": "4.16.2",
-    "winston-color": "1.0.0"
+    "winston-color": "1.0.0",
+    "yargs": "10.0.3"
   },
   "dependencies": {
     "redux": "3.7.2"
