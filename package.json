@@ -7,7 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "dev": "bower cache clean && bower install && polymer serve --open",
+    "install": "bower cache clean && bower install",
+    "dev": "npm run install && node_modules/.bin/gulp config && node server.js",
+    "prod": "npm run install && polymer build && node_modules/.bin/gulp config --env prod && node server.js",
     "view": "node_modules/.bin/gulp view --tag ef-option-list"
   },
   "repository": {
@@ -28,7 +30,10 @@
     "gulp-data": "1.2.1",
     "gulp-rename": "1.2.2",
     "gulp-template": "4.0.0",
-    "yargs": "10.0.3"
+    "yargs": "10.0.3",
+    "dotenv": "4.0.0",
+    "express": "4.16.2",
+    "winston-color": "1.0.0"
   },
   "dependencies": {
     "redux": "3.7.2"

@@ -1,7 +1,25 @@
 {
+  "entrypoint": "index.html",
+  "shell": "src/emulador-financiero-app/emulador-financiero-app.html",
+  "fragments": [
+    "src/views/*.html"
+  ],
+  "sources": [
+    "src/**/*",
+    "data/**/*",
+    "images/**/*",
+    "bower.json"
+  ],
+  "extraDependencies": [
+    "manifest.json",
+    "bower_components/webcomponentsjs/webcomponents-lite.js",
+    "bower_components/**/*.html",
+    "node_modules/redux/dist/redux.js"
+  ],
   "lint": {
-    "rules": [
-      "polymer-2"
-    ]
-  }
+    "rules": ["polymer-2"]
+  },
+  "builds": [
+    { "preset": "es6-unbundled" }
+  ]
 }
