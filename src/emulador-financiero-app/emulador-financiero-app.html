@@ -19,6 +19,7 @@
 <link rel="import" href="./emulador-financiero-app-styles.html">
 <link rel="import" href="../views/form-yhoshua/form-yhoshua.html">
 <link rel="import" href="../views/notes-view/notes-view.html">
+<link rel="import" href="../views/contact-form-view/contact-form-view.html">
 
 <link rel="import" href="../views/home-view/home-view.html">
 
@@ -42,9 +43,10 @@
                         <h1>Menu</h1>
                         <iron-selector selected="[[routeData.view]]" attr-for-selected="name" class="drawer-list"
                                        role="navigation">
-                            <a name="view3" href="view3">Estado de Cuenta</a>
+                            <a name="view4" href="view4">Estado de Cuenta</a>
                             <a name="view1" href="view1">pagina yhoshua</a>
                             <a name="view2" href="view2">pagina luis</a>
+                            <a name="view3" href="view3">pagina Gerardo</a>
                         </iron-selector>
                     </app-header>
                 </app-header-layout>
@@ -70,8 +72,10 @@
                     <div name="view2">
                         <notes-view></notes-view>
                     </div>
-
-                    <home-view name="view3"></home-view>
+                    <home-view name="view4"></home-view>
+                    <div name="view3">
+                        <contact-form-view></contact-form-view>
+                    </div>
                 </iron-pages>
             </app-header-layout>
         </app-drawer-layout>
