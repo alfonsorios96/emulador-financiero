@@ -1,7 +1,7 @@
 {
   "name": "emulador-financiero",
   "main": "index.html",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "dependencies": {
     "polymer": "Polymer/polymer#2.2.0",
     "polymer-redux": "1.0.4",
@@ -10,7 +10,9 @@
     "paper-icon-button": "2.0.1",
     "iron-iconset-svg": "2.1.0",
     "app-route": "PolymerElements/app-route#2.0.3",
-    "estado-cuenta": "aldoaldaco/estado-cuenta#^0.0.1"
+    "estado-cuenta": "aldoaldaco/estado-cuenta#^0.0.2",
+    "example-element": "yhoshua8a/simple-form#0.0.1",
+    "add-note": "lui5-zm/add-note#1.0.0"
   },
   "devDependencies": {
     "web-component-tester": "Polymer/web-component-tester#6.0.0",
