@@ -18,6 +18,8 @@
 <link rel="import" href="../redux.html">
 <link rel="import" href="./emulador-financiero-app-styles.html">
 
+<link rel="import" href="../views/home-view/home-view.html">
+
 <dom-module id="emulador-financiero-app">
     <template>
         <style include="emulador-financiero-app-styles"></style>
@@ -40,13 +42,13 @@
                                        role="navigation">
                             <a name="view1" href="view1">View One</a>
                             <a name="view2" href="view2">View Two</a>
-                            <a name="view3" href="view3">View Three</a>
+                            <a name="view3" href="view3">Estado de Cuenta</a>
                         </iron-selector>
                     </app-header>
                 </app-header-layout>
             </app-drawer>
             <!-- Main content -->
-            <app-header-layout has-scrolling-region class="views">
+            <app-header-layout has-scrolling-region class="views">x
 
                 <app-header slot="header" condenses reveals effects="waterfall">
                     <app-toolbar>
@@ -66,9 +68,8 @@
                     <div name="view2">
                         <h1>Vista 2</h1>
                     </div>
-                    <div name="view3">
-                        <h1>Vista 3</h1>
-                    </div>
+
+                    <home-view name="view3"></home-view>
                 </iron-pages>
             </app-header-layout>
         </app-drawer-layout>
