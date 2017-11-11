@@ -1,13 +1,22 @@
 {
   "name": "emulador-financiero",
   "main": "index.html",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "dependencies": {
     "polymer": "Polymer/polymer#2.2.0",
-    "polymer-redux": "1.0.4"
+    "polymer-redux": "1.0.4",
+    "app-layout": "PolymerElements/app-layout#2.0.4",
+    "iron-pages": "2.0.0",
+    "app-route": "*",
+    "paper-icon-button": "2.0.1",
+    "iron-iconset-svg": "2.1.0"
   },
   "devDependencies": {
     "web-component-tester": "Polymer/web-component-tester#6.0.0",
     "webcomponentsjs": "webcomponents/webcomponentsjs#1.0.2"
+  },
+  "resolutions": {
+    "polymer": "2.2.0",
+    "webcomponentsjs": "^v1.0.2"
   }
 }
