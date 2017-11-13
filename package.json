@@ -1,16 +1,17 @@
 {
   "name": "emulador-financiero",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "Prática de arquitectura app polymer 2",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "gulp": "gulp",
     "install": "bower cache clean && bower install",
-    "dev": "npm run install && node_modules/.bin/gulp default && node server.js",
-    "prod": "npm run install && polymer build && node_modules/.bin/gulp config --env prod && node server.js",
-    "view": "node_modules/.bin/gulp view --tag ef-option-list"
+    "dev": "npm run install && gulp && node server.js",
+    "prepare": "npm run install && polymer build",
+    "prod": "npm run prepare && gulp config --env prod && node server.js"
   },
   "repository": {
     "type": "git",

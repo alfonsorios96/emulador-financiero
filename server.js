@@ -6,10 +6,7 @@ const logger = require('winston-color');
 
 let server = express();
 
-if (process.env.NODE_ENV === 'development') {
-    server.use(express.static(path.join(__dirname)));
-} else if (process.env.NODE_ENV === 'production') {
-    server.use(express.static(path.join(__dirname, 'build/default')));
-}
+server.use(express.static(path.join(__dirname + process.env.PATH)));
 
 server.listen(process.env.PORT);
+logger.info(`Server is running on: http://127.0.0.1:${process.env.PORT}`);
