@@ -65,11 +65,26 @@ gulp.task('view-js', () => {
 
 // Ends create js file
 
+// Begins create service worker file
+
+gulp.task('generate-service-worker', (callback) => {
+    const path = require('path');
+    const swPrecache = require('sw-precache');
+    const rootDir = 'build/es6-unbundled';
+
+    swPrecache.write(path.join(rootDir + '/service-worker.js'), {
+        staticFileGlobs: [rootDir + '/**/*.*'],
+        stripPrefix: rootDir
+    }, callback);
+});
+
+// Ends create service worker file
+
 gulp.task('view', ['view-styles', 'view-html', 'view-js']);
 
 // Begins enviroment config
 
-gulp.task('config', () => {
+gulp.task('config', ['generate-service-worker'], () => {
     'use strict';
     gulp.src(`env/${env}.config`)
         .pipe(template())

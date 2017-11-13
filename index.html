@@ -9,7 +9,13 @@
 
     <!-- See https://goo.gl/OOhYW5 -->
     <link rel="manifest" href="/manifest.json">
-
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js').then(function() {
+                console.log("Service Worker Registered");
+            });
+        }
+    </script>
     <script src="./bower_components/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="./node_modules/redux/dist/redux.js"></script>
     <link rel="import" href="./bower_components/polymer-redux/polymer-redux.html">
