@@ -7,8 +7,8 @@
 <link rel="import" href="../../bower_components/app-layout/app-toolbar/app-toolbar.html">
 <link rel="import" href="../../bower_components/app-layout/app-scroll-effects/effects/waterfall.html">
 
-<link rel="import" href="../../bower_components/app-route/app-route.html">
-<link rel="import" href="../../bower_components/app-route/app-location.html">
+<link rel="import" href="../../bower_components/excess-router/excess-route-manager.html">
+<link rel="import" href="../../bower_components/excess-router/excess-route.html">
 <link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="../../bower_components/iron-selector/iron-selector.html">
 
@@ -23,24 +23,22 @@
         <style include="emulador-financiero-app-styles"></style>
 
         <!--location & route-->
-        <app-location route="{{route}}"></app-location>
-        <app-route
-                route="{{route}}"
-                pattern="/:view"
-                data="{{routeData}}"
-                tail="{{subroute}}">
-        </app-route>
+        <excess-route
+                route="/:view"
+                view="{{appMenu}}"
+        ></excess-route>
+        <excess-route route="/(.*)" redirect_to="/view1"></excess-route>
 
         <app-drawer-layout fullbleed narrow="{{narrow}}">
             <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
                 <app-header-layout has-scrolling-region>
                     <app-header>
                         <h1>Menu</h1>
-                        <iron-selector selected="[[routeData.view]]" attr-for-selected="name" class="drawer-list"
+                        <iron-selector selected="{{appMenu}}" attr-for-selected="name" class="drawer-list"
                                        role="navigation">
-                            <a name="view1" href="view1">View One</a>
-                            <a name="view2" href="view2">View Two</a>
-                            <a name="view3" href="view3">View Three</a>
+                            <a name="view1" href="#view1">View One</a>
+                            <a name="view2" href="#view2">View Two</a>
+                            <a name="view3" href="#view3">View Three</a>
                         </iron-selector>
                     </app-header>
                 </app-header-layout>
@@ -56,7 +54,7 @@
                 </app-header>
 
                 <iron-pages
-                        selected="[[routeData.view]]"
+                        selected="{{appMenu}}"
                         attr-for-selected="name"
                         fallback-selection="view404"
                         role="main">

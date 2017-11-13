@@ -1,6 +1,6 @@
 {
   "name": "emulador-financiero",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Prática de arquitectura app polymer 2",
   "main": "index.js",
   "directories": {
