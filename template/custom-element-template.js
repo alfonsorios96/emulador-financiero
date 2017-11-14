@@ -5,7 +5,7 @@
      * @customElement
      * @polymer
      */
-    class <%= className %> extends ReduxMixin(Polymer.Element) {
+    class <%= className %> extends ReduxMixin(BaseElements.I18nElement) {
 
         static get is() {
             return '<%= tagName %>';
