@@ -23,26 +23,6 @@ const dashCaseToUpperCase = (string) => {
     return capitalizeString.join('');
 };
 
-// Begins create locales file
-
-gulp.task('view-locales', () => {
-    'use strict';
-    gulp.src('template/custom-element.xx.json')
-        .pipe(template())
-        .pipe(rename(`${tagName}.es.json`))
-        .pipe(gulp.dest(`src/views/${tagName}/locales`));
-});
-
-gulp.task('view-locales-XL', () => {
-    'use strict';
-    gulp.src('template/custom-element.xx.json')
-        .pipe(template())
-        .pipe(rename(`${tagName}.es-XL.json`))
-        .pipe(gulp.dest(`src/views/${tagName}/locales`));
-});
-
-// Ends create locales file
-
 // Begins create styles file
 
 gulp.task('view-styles', () => {
@@ -100,7 +80,7 @@ gulp.task('generate-service-worker', (callback) => {
 
 // Ends create service worker file
 
-gulp.task('view', ['view-styles', 'view-html', 'view-js', 'view-locales', 'view-locales-XL']);
+gulp.task('view', ['view-styles', 'view-html', 'view-js']);
 
 // Begins enviroment config
 
